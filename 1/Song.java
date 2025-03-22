@@ -13,25 +13,29 @@ public class Song extends MusicTrack {
 
     public void printSongData() {
         System.out.println("Song name: " + getTitle() + ", From album: " + album
-                + "Genre: " + genre + (!feat.equals("none") ? ", Feat. " + feat : ""));
+                + ", Genre: " + genre + (!feat.equals("none") ? ", Feat. " + feat : ""));
     }
-    public void updateGenre(String newGenre){
+
+    public void updateGenre(String newGenre) {
         this.genre = newGenre;
         System.out.println("Genre has been updated! New genre: " + genre);
     }
+
     public void hasFeat() {
-        if (!feat.equals("none")){
+        if (!feat.equals("none")) {
             System.out.println("Feat. " + feat);
-        }
-        else System.out.println("No Feats!");
+        } else System.out.println("No Feats!");
     }
-    public String getAlbum(){
+
+    public String getAlbum() {
         return this.album;
     }
-    public String getGenre(){
+
+    public String getGenre() {
         return this.genre;
     }
-    public String getFeat(){
+
+    public String getFeat() {
         return this.feat;
     }
 }
